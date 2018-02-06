@@ -1,8 +1,8 @@
 # Latest version of centos
 FROM centos:centos7
-RUN yum update && \
+RUN yum update -y && \
     yum -y install epel-release && \
     yum -y install PyYAML python-jinja2 python-httplib2 python-keyczar python-paramiko python-setuptools git python-pip && \
     pip install --upgrade pip && \
-    pip install --upgrade ansible-tower-cli && \
+    pip install -y ansible-tower-cli && \
     yum clean all
